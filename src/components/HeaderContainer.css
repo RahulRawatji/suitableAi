@@ -1,0 +1,36 @@
+.header_container {
+  background-color: #0ed746;
+  padding-top: min(3%, 50px);
+  padding-bottom: min(10%, 120px);
+}
+
+.header_content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  width: min(80%, 1400px);
+  margin: auto;
+  color: #f8f9fa;
+}
+
+input {
+  width: 100%;
+  padding: 10px 1%;
+  outline: none;
+  border-radius: 3px;
+  border: none;
+}
+
+@media (min-width: 570px) {
+  input {
+    width: 50%;
+  }
+}
+
+@media (min-width: 840px) {
+  input {
+    width: 25%;
+  }
+}

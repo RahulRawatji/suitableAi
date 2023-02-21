@@ -1,0 +1,118 @@
+.user_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  padding: 1%;
+  gap: 3rem;
+  min-width: 100%;
+}
+
+.user_img {
+  background-color: #3393f8;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.user_progress_img {
+  margin-left: -8px;
+  z-index: 1;
+}
+
+.mobile-view {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 0.4rem;
+}
+
+.progress-item {
+  position: relative;
+  padding-left: 10px;
+  display: flex;
+}
+
+.progress-item:not(:last-child)::after {
+  position: absolute;
+  content: "";
+  background-color: #b9bcc0;
+  width: 4px;
+  height: 55px;
+  left: 20px;
+  margin-top: 24px;
+}
+
+.progress-item.is_current::after {
+  height: 68px;
+}
+
+.active::before {
+  position: absolute;
+  content: "";
+  background-color: #0ed746;
+  width: 4px;
+  height: 55px;
+  left: 20px;
+  margin-top: 24px;
+  z-index: 1;
+}
+
+/* Tablet */
+
+@media (min-width: 570px) {
+  .user_container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .user_container:nth-child(odd) {
+    background-color: #f8f9fa;
+  }
+
+  .mobile-view {
+    display: none;
+  }
+
+  .progress-item:not(:last-child)::after {
+    width: 90%;
+    height: 4px;
+    left: 36px;
+    top: -12px;
+  }
+
+  .active::before {
+    width: 90%;
+    height: 4px;
+    z-index: 1;
+    top: -12px;
+    left: 36px;
+  }
+
+  .money_sack {
+    display: none;
+  }
+
+  .reward {
+    font-size: 1rem;
+  }
+  .progress-item.is_current::after {
+    top: -6px;
+  }
+}
+
+@media (min-width: 875px) {
+  .reward {
+    font-size: 1.4rem;
+  }
+
+  .progress-item:not(:last-child)::after {
+    width: 95%;
+  }
+
+  .active::before {
+    width: 95%;
+  }
+}

@@ -1,0 +1,39 @@
+.user_table_header {
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  gap: 1rem;
+  padding: 1%;
+  justify-content: center;
+  display: none;
+}
+
+.header_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header_item {
+  font-size: 1rem;
+}
+
+@media (min-width: 570px) {
+  .user_table_header {
+    display: grid;
+  }
+
+  .header_item {
+    font-size: 0.9rem;
+  }
+}
+
+@media (min-width: 800px) {
+  .header_item {
+    font-size: 1.2rem;
+  }
+
+  .header_item:not(:first-child) {
+    display: flex;
+    justify-content: start;
+  }
+}
