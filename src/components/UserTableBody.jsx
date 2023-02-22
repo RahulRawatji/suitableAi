@@ -4,6 +4,7 @@ import { BsChevronDown } from "react-icons/bs";
 
 import user from "../assets/man21.png";
 import moneySack from "../assets/moneySack.png";
+import noResult from "../assets/noResult.png";
 import { CANDIDATE_DATA } from "../utils/CANDIDATE_DATA";
 import "./UserTableBody.css";
 import Stages from "./Stages";
@@ -23,6 +24,12 @@ const UserTableBody = ({ searchText }) => {
     });
     setData(filteredData);
   };
+
+  if(data.length == 0){
+    return (<div className="flex" style={{justifyContent:'center'}}>
+      <img src={noResult} alt="No Result Found" width="400px"/> 
+    </div>)
+  }
   return (
     <>
       {data.map((info) => {
