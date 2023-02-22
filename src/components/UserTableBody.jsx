@@ -19,7 +19,7 @@ const UserTableBody = ({ searchText }) => {
     let filteredData = CANDIDATE_DATA.filter((item) => {
       return searchText.toLowerCase() == ""
         ? item
-        : item.name.toLowerCase().includes(searchText);
+        : item.name.toLowerCase().includes(searchText.toLowerCase());
     });
     setData(filteredData);
   };
