@@ -58,6 +58,9 @@
   z-index: 1;
 }
 
+.fallback_container{
+  margin: auto;
+}
 /* Tablet */
 
 @media (min-width: 570px) {

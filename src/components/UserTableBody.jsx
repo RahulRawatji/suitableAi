@@ -26,8 +26,8 @@ const UserTableBody = ({ searchText }) => {
   };
 
   if(data.length == 0){
-    return (<div className="flex" style={{justifyContent:'center'}}>
-      <img src={noResult} alt="No Result Found" width="400px"/> 
+    return (<div className="fallback_container">
+      <img src={noResult} alt="No Result Found" width="280px"/> 
     </div>)
   }
   return (
