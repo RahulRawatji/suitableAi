@@ -7,12 +7,13 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-left: auto;
-  margin-right: auto;
+  position: absolute;
   width: min(80%,1400px);
   padding: min(2%,20px);
   background-color:white;
+  left: 50%;
   border-radius: 5px;
+  transform: translateX(-50%);
 }
 
 
@@ -22,9 +23,8 @@
 
   .body_container {
     width: min(90%,1400px);
-    transform: translateY(max(-7%,-55px));
+    top: 27%;
   }
-
 }
 
 
@@ -32,8 +32,15 @@
 
   .body_container {
     max-width: 80%;
-    transform: translateY(max(-9%,-170px));
-    /* transform: translateY(-18%); */
+    top: 30%;
+  }
+}
+
+
+@media (min-width:1100px) {
+
+  .body_container {
+    top: min(34%,200px);
   }
 
 }
